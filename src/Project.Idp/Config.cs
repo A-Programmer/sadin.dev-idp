@@ -33,11 +33,11 @@ public static class Config
                 AllowRememberConsent = false,
                 RedirectUris = new List<string>
                 {
-                    "http://localhost:5001/signin-oidc"
+                    "https://admin.sadin.dev/signin-oidc"
                 },
                 PostLogoutRedirectUris = new List<string>
                 {
-                    "http://localhost:5001/signout-callback-oidc"
+                    "https://admin.sadin.dev/signout-callback-oidc"
                 },
                 ClientSecrets = new List<Secret>
                 {
@@ -59,11 +59,11 @@ public static class Config
                 AllowRememberConsent = false,
                 RedirectUris = new List<string>
                 {
-                    "http://localhost:5001/signin-oidc"
+                    "https://admin.sadin.dev/signin-oidc"
                 },
                 PostLogoutRedirectUris = new List<string>
                 {
-                    "http://localhost:5001/signout-callback-oidc"
+                    "https://admin.sadin.dev/signout-callback-oidc"
 
                 },
                 ClientSecrets = new List<Secret>
