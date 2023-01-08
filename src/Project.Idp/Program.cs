@@ -20,7 +20,7 @@ else
         .Build();
 }
 
-if (!builder.Environment.IsDevelopment())
+if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddIdentityServer()
         .AddInMemoryClients(Config.Clients)
