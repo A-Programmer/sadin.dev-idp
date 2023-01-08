@@ -20,7 +20,7 @@ else
         .Build();
 }
 
-if (builder.Environment.IsDevelopment())
+if (!builder.Environment.IsDevelopment())
 {
     builder.Services.AddIdentityServer()
         .AddInMemoryClients(Config.Clients)
@@ -31,9 +31,8 @@ if (builder.Environment.IsDevelopment())
 }
 else
 {
-    
     X509Certificate2 cert = null;
-    cert = new X509Certificate2(Path.Combine("wwwroot\\certs", "aspnetapp.pfx"), "123456");
+    cert = new X509Certificate2(Path.Combine(builder.Environment.ContentRootPath, "wwwroot/certs", "aspnetapp.pfx"), "123456");
     builder.Services.AddIdentityServer()
         .AddInMemoryClients(Config.Clients)
         .AddInMemoryApiScopes(Config.ApiScopes)
