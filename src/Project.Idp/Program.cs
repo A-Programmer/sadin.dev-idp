@@ -33,7 +33,7 @@ else
 {
     
     X509Certificate2 cert = null;
-    cert = new X509Certificate2(Path.Combine("wwwroot/certs", "aspnetapp.pfx"), "123456");
+    cert = new X509Certificate2(Path.Combine("wwwroot\\certs", "aspnetapp.pfx"), "123456");
     builder.Services.AddIdentityServer()
         .AddInMemoryClients(Config.Clients)
         .AddInMemoryApiScopes(Config.ApiScopes)
